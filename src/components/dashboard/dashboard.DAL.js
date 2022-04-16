@@ -1,7 +1,7 @@
 const StudentResult = require('../student/studentResult.model');
 
 async function getDetailsBySubject(subject) {
-  return StudentResult.aggregate([
+  const result = await StudentResult.aggregate([
     {
       $match: {
         subject,
@@ -90,6 +90,12 @@ async function getDetailsBySubject(subject) {
       },
     },
   ]);
+  return result.map((doc) => {
+    if (doc.average) {
+      doc.average = (Math.round(doc.average * 100) / 100).toFixed(2);
+    }
+    return result;
+  });
 }
 
 module.exports = {
