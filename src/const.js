@@ -1,0 +1,53 @@
+const names = [
+  'Aaltje',
+  'Aamar',
+  'Aamer',
+  'Aamir',
+  'Aaron',
+  'Aase',
+  'Aatika',
+  'Aaya',
+  'Aba',
+  'Ababacar',
+  'Abad',
+  'Abarca',
+  'Abarne',
+  'Abass',
+  'Abasse',
+  'Abba',
+  'Abbas',
+  'Abbass',
+  'Abbes',
+  'Abbey',
+  'Abbie',
+  'Bistra',
+  'Bita',
+  'Bitor',
+  'Bittor',
+  'Biviana',
+  'Bixente',
+  'Bixia',
+  'Biying',
+  'Biyu',
+  'Bjarne',
+  'Bjoern',
+  'Bjorg',
+  'Bjorn',
+  'Bladimir',
+  'Bladimiro',
+  'Blagovest',
+  'Blagoy',
+  'Blai',
+  'Blaine',
+  'Blair',
+  'Blaise',
+];
+
+const subjects = ['maths', 'physics', 'chemistry', 'biology', 'english'];
+/**
+ * Exports
+ */
+module.exports = {
+  names,
+  subjects,
+};
