@@ -1,15 +1,14 @@
-/**
- * System and 3rd party libs
+/** * System and 3rd party libs
  */
 const express = require('express');
+const controller = require('./dashboard.controller');
 
 const router = express.Router();
-const dashboardRoute = require('./dashboard/dashboard.route');
 
 /**
  * Router Definitions
  */
-router.use('/dashboard', dashboardRoute);
+router.get('/', controller.getHodDetailsBySubject);
 
 /**
  * Export Router
