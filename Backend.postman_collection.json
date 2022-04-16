@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "3335da43-a9ee-4327-a71f-f3946ef1d200",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dashboard",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}api/dashboard?subject=physics",
+					"host": [
+						"{{base_url}}api"
+					],
+					"path": [
+						"dashboard"
+					],
+					"query": [
+						{
+							"key": "subject",
+							"value": "physics"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Dashboard : 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}api/dashboard?subject=physics",
+							"host": [
+								"{{base_url}}api"
+							],
+							"path": [
+								"dashboard"
+							],
+							"query": [
+								{
+									"key": "subject",
+									"value": "physics"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "663"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"297-xVLA5FpROAh8W5bEz+4GqVyFGsk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 16 Apr 2022 13:38:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"successCode\": \"FETCHED_SUCCESSFULLY\",\n    \"data\": [\n        {\n            \"_id\": \"625ac36cc6136e1f04545895\",\n            \"name\": \"Aba\",\n            \"totalTeacher\": 7,\n            \"totalStudent\": 110,\n            \"average\": 62.7\n        },\n        {\n            \"_id\": \"625ac36bc6136e1f0454557a\",\n            \"name\": \"Abbie\",\n            \"totalTeacher\": 8,\n            \"totalStudent\": 113,\n            \"average\": 66.8141592920354\n        },\n        {\n            \"_id\": \"625ac36bc6136e1f0454531c\",\n            \"name\": \"Aaltje\",\n            \"totalTeacher\": 5,\n            \"totalStudent\": 78,\n            \"average\": 65.52564102564102\n        },\n        {\n            \"_id\": \"625ac369c6136e1f04544f31\",\n            \"name\": \"Blai\",\n            \"totalTeacher\": 9,\n            \"totalStudent\": 133,\n            \"average\": 64.203007518797\n        },\n        {\n            \"_id\": \"625ac368c6136e1f04544b8e\",\n            \"name\": \"Biying\",\n            \"totalTeacher\": 9,\n            \"totalStudent\": 106,\n            \"average\": 64.38679245283019\n        }\n    ],\n    \"description\": \"Analytics fetched successfully\",\n    \"statusCode\": 200\n}"
+				}
+			]
+		}
+	]
+}

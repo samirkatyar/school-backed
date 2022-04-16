@@ -16,7 +16,11 @@ npm i # (for local setup)
 npm start
 ```
 
-#### Folder Structure
+## API Reference
+
+- Please get the `backend.postman_collection.json` file from directory and import it in postman.
+
+## Folder Structure
 
 Common structure that is used in this project is as following
 
