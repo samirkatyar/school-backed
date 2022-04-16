@@ -5,9 +5,10 @@ const Teachers = require('../components/teacher/teacher.model');
 const StudentResult = require('../components/student/studentResult.model');
 const log = require('../services/logger.service');
 
-const totalHod = 5;
-const totalTeacherPerHod = 5;
-const totalStudentPerTeacher = 35;
+const totalHod = parseInt(process.env.TOTAL_HOD, 10) || 5;
+const totalTeacherPerHod = parseInt(process.env.TOTAL_TEACHER_PER_HOD, 10) || 5;
+const totalStudentPerTeacher =
+  parseInt(process.env.TOTAL_STUDENT_PER_TEACHER, 10) || 35;
 
 async function initDatabase() {
   try {
