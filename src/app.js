@@ -43,11 +43,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-
 /**
  * Import and Register Routes
  */
 const index = require('./components');
+const { initDatabase } = require('./helper/database.helper');
 
 app.use('/api', index);
 
@@ -67,6 +67,9 @@ mongoose.Promise = global.Promise;
 
 mongoose.connection.on('connected', () => {
   logger.info('DATABASE - Connected');
+  initDatabase().catch((err) => {
+    logger.error(err);
+  });
 });
 
 mongoose.connection.on('error', (err) => {
