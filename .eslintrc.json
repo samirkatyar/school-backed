@@ -26,6 +26,7 @@
     "class-methods-use-this": "off",
     "prettier/prettier": "error",
     "func-names": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-await-in-loop": "off"
   }
 }
