@@ -94,7 +94,7 @@ async function getDetailsBySubject(subject) {
     if (doc.average) {
       doc.average = (Math.round(doc.average * 100) / 100).toFixed(2);
     }
-    return result;
+    return doc;
   });
 }
 

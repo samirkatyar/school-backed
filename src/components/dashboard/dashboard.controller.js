@@ -27,6 +27,7 @@ async function getHodDetailsBySubject(req, res) {
     let result;
 
     if (analyticsMap[subject]) {
+      // TODO: We will remove from the map if we change in teacher hod or student.
       result = analyticsMap[subject];
     } else {
       result = await dbDashboard.getDetailsBySubject(subject);
